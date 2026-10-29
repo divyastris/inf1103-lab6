@@ -9,6 +9,12 @@
         "id": "P005",
         "name": "Keyboard",
         "price": 45.0,
-        "stock": 25
+        "stock": 35
+    },
+    {
+        "id": "P006",
+        "name": "Mouse",
+        "price": 5.0,
+        "stock": 100
     }
 ]
