@@ -1,0 +1,11 @@
+from abc import ABC, abstractmethod
+
+
+class CanBeShipped(ABC):
+    """Interface-style abstract base class (a 'must-be-able-to' contract, not 'is-a').
+    Any class that signs it must provide calculate_shipping_cost()."""
+
+    @abstractmethod
+    def calculate_shipping_cost(self):
+        """Return the cost of shipping this object, in dollars."""
+        pass

@@ -1,8 +1,11 @@
 from product import Product
+from can_be_shipped import CanBeShipped
 
+class PhysicalProduct(Product, CanBeShipped):
+    """A PhysicalProduct IS-A Product and CAN-BE-SHIPPED."""
 
-class PhysicalProduct(Product):
-    """A PhysicalProduct IS-A Product (inheritance)."""
+    BASE_SHIPPING_FEE = 5.00   # flat fee for every parcel
+    RATE_PER_KG = 2.00         # extra charge for each kg
 
     def __init__(self, product_id, name, price, stock, weight):
         super().__init__(product_id, name, price, stock)  # reuse Product's constructor
@@ -20,3 +23,7 @@ class PhysicalProduct(Product):
 
     def get_fulfilment_info(self):
         return "Requires physical shipping (" + str(self.__weight) + " kg parcel)."
+
+    def calculate_shipping_cost(self):
+        """Simple rule: $5.00 flat fee + $2.00 per kg."""
+        return round(self.BASE_SHIPPING_FEE + self.RATE_PER_KG * self.__weight, 2)

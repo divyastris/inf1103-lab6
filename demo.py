@@ -18,3 +18,8 @@ try:
     Product("X1", "Generic", 1.0, 1)
 except TypeError as error:
     print("Cannot create Product directly:", error)
+
+print("--- Section 4: shipping cost for different weights ---")
+for weight in [0.1, 3.5, 20]:
+    item = PhysicalProduct("P999", "Test box", 10.0, 1, weight)
+    print(weight, "kg -> shipping $" + format(item.calculate_shipping_cost(), ".2f"))
