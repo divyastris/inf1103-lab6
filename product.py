@@ -1,4 +1,6 @@
-class Product:
+from abc import ABC, abstractmethod
+
+class Product(ABC):
     """Represents and manages ONE product (Single Responsibility Principle)."""
 
     def __init__(self, product_id, name, price, stock):
@@ -30,3 +32,8 @@ class Product:
     def display_information(self):
         print("ID:", self.__product_id, "| Name:", self.__name,
               "| Price: $" + str(self.__price), "| Stock:", self.__stock)
+
+    def get_fulfilment_info(self):
+        """Return how this product reaches the customer.
+        No implementation here - every child class MUST provide its own."""
+        pass
