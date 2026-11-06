@@ -27,3 +27,9 @@ class PhysicalProduct(Product, CanBeShipped):
     def calculate_shipping_cost(self):
         """Simple rule: $5.00 flat fee + $2.00 per kg."""
         return round(self.BASE_SHIPPING_FEE + self.RATE_PER_KG * self.__weight, 2)
+
+    def to_dict(self):
+        data = super().to_dict()                # parent gives the common fields
+        data["type"] = "physical"               # type identifier for loading
+        data["weight"] = self.__weight
+        return data

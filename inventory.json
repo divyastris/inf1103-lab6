@@ -3,18 +3,40 @@
         "id": "P004",
         "name": "Monitor",
         "price": 299.99,
-        "stock": 20
+        "stock": 20,
+        "type": "physical",
+        "weight": 5.5
     },
     {
         "id": "P005",
         "name": "Keyboard",
         "price": 45.0,
-        "stock": 35
+        "stock": 35,
+        "type": "physical",
+        "weight": 1.2
     },
     {
         "id": "P006",
         "name": "Mouse",
         "price": 5.0,
-        "stock": 100
+        "stock": 100,
+        "type": "physical",
+        "weight": 0.1
+    },
+    {
+        "id": "D001",
+        "name": "Windows 11 Licence",
+        "price": 199.0,
+        "stock": 50,
+        "type": "digital",
+        "download_size": 5400.0
+    },
+    {
+        "id": "D002",
+        "name": "Photo Editor App",
+        "price": 29.9,
+        "stock": 200,
+        "type": "digital",
+        "download_size": 350.0
     }
 ]
