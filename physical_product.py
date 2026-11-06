@@ -17,3 +17,6 @@ class PhysicalProduct(Product):
     def display_information(self):
         super().display_information()
         print("    Type: Physical | Weight:", self.__weight, "kg")
+
+    def get_fulfilment_info(self):
+        return "Requires physical shipping (" + str(self.__weight) + " kg parcel)."

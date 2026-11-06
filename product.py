@@ -33,6 +33,7 @@ class Product(ABC):
         print("ID:", self.__product_id, "| Name:", self.__name,
               "| Price: $" + str(self.__price), "| Stock:", self.__stock)
 
+    @abstractmethod
     def get_fulfilment_info(self):
         """Return how this product reaches the customer.
         No implementation here - every child class MUST provide its own."""
