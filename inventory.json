@@ -38,5 +38,21 @@
         "stock": 200,
         "type": "digital",
         "download_size": 350.0
+    },
+    {
+        "id": "P200",
+        "name": "Guitar",
+        "price": 350.0,
+        "stock": 5,
+        "type": "physical",
+        "weight": 3.5
+    },
+    {
+        "id": "D200",
+        "name": "Game",
+        "price": 59.9,
+        "stock": 100,
+        "type": "digital",
+        "download_size": 12000.0
     }
 ]
