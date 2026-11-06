@@ -15,6 +15,5 @@ class DigitalProduct(Product):
         return self.__download_size
 
     def display_information(self):
-        print("ID:", self.get_product_id(), "| Name:", self.get_name(),
-              "| Price: $" + str(self.get_price()), "| Stock:", self.get_stock())
+        super().display_information()
         print("    Type: Digital | Download size:", self.__download_size, "MB")

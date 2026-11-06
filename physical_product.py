@@ -15,6 +15,5 @@ class PhysicalProduct(Product):
         return self.__weight
 
     def display_information(self):
-        print("ID:", self.get_product_id(), "| Name:", self.get_name(),
-              "| Price: $" + str(self.get_price()), "| Stock:", self.get_stock())
+        super().display_information()
         print("    Type: Physical | Weight:", self.__weight, "kg")
